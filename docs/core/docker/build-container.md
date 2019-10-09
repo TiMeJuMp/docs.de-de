@@ -180,7 +180,11 @@ Navigieren Sie in Ihrem Terminal ein Verzeichnis nach oben zu dem Arbeitsordner,
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
-
+--For .Net CORE 3.0
+use 
+```dockerfile
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0
+```
 Der Befehl `FROM` weist Docker an, das mit **2.2** gekennzeichnete Image aus dem Repository **mcr.microsoft.com/dotnet/core/runtime** herunterzuladen. Stellen Sie sicher, dass Sie die .NET Core-Runtime pullen, die der von Ihrem SDK angestrebten Runtime entspricht. So verwendete beispielsweise die im vorherigen Abschnitt erstellte App das .NET Core 2.2 SDK und erstellte eine App, die auf.NET Core 2.2 ausgerichtet war. So wird das in der *Dockerfile* genannte Basisimage mit **2.2** gekennzeichnet.
 
 Speichern Sie das *Dockerfile*. Die Verzeichnisstruktur des Arbeitsordners sollte wie folgt aussehen. Einige Dateien und Ordner, die sich auf tieferen Ebenen befinden, sind in diesem Beispiel nicht enthalten, um Platz zu sparen:
